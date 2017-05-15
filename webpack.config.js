@@ -1,12 +1,4 @@
-/*
-    npm i react react-dom --save
-    npm i --save-dev webpack
-    npm i --save-dev babel-loader babel-core
-    npm install --save-dev babel-preset-react
-    npm install --save-dev babel-preset-es2015
-    npm i --save-dev webpack-dev-server
-    npm install --save-dev react-hot-loader
-*/
+
 
 
 const path = require('path');
@@ -27,8 +19,8 @@ module.exports = {
     },
     
     devServer: {
-            contentBase: path.join(__dirname, 'dist/js'),
-            publicPath: '/'
+            contentBase: path.join(__dirname, 'dist'),
+            publicPath: '/js'
           },
     
     module: {
