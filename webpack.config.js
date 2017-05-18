@@ -8,7 +8,7 @@ module.exports = {
     context: path.join(__dirname,'src'),
     
     entry: {
-        main: './main.js'
+        main: './main'
     },
     
     output: {
@@ -17,7 +17,9 @@ module.exports = {
         filename: "[name].js",
         library: 'home'
     },
-    
+     resolve: {
+        extensions: ['.js', '.jsx', '.json', '*']
+    },
     devServer: {
             contentBase: path.join(__dirname, 'dist'),
             publicPath: '/js'
@@ -26,7 +28,7 @@ module.exports = {
     module: {
         
         rules: [
-            { test: /\.js$/, exclude: /node_modules/, loaders: [ "react-hot-loader", "babel-loader"] }
+            { test: /\.jsx?$/, exclude: /node_modules/, loaders: [ "react-hot-loader", "babel-loader"] }
         ]
     }
     
